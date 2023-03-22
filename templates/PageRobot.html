@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Robot Page</title>
+
+</head>
+
+<body>
+
+    <form action="addPosition" method="post">
+      
+        <b><label for="X">X</label></b>
+
+        <input type="number" id="X" name="X" required>
+        
+        <b><label for="Y">Y</label></b>
+
+        <input type="number" id="Y" name="Y" required>
+
+        <b><label for="Z">Z</label></b>
+
+        <input type="number" id="Z" name="Z" required>
+
+        <button type="submit">Add</button>
+
+    </form>
+
+    <h3>Posição</h3>
+
+    <table>
+
+        <tr>
+
+            <th>X</th>
+
+            <th>Y</th>
+
+            <th>Z</th>
+
+        </tr>
+
+        {% for cod in positions %}
+        <tr>
+
+            <td>{{cod["X"]}}</td>
+
+            <td>{{cod["Y"]}}</td>
+
+            <td>{{cod["Z"]}}</td>
+
+        </tr>
+
+        {% endfor %}
+
+    </table>
+
+</body>
+
+<style>
+
+    table {
+
+	font-family: 'Times New Roman', Times, serif;
+
+	border-collapse: collapse;
+
+	width: 100%;
+
+  }
+  
+  td, th {
+
+	border: 1px solid #000000;
+
+	text-align: left;
+
+	padding: 8px;
+
+  }
+  
+  tr:nth-child(even) {
+
+	background-color: #00d9ff;
+
+  }
+
+  tr:nth-child(odd) {
+
+	background-color: #d000ff;
+
+  }
+  
+</style>
+
+</html>

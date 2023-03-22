@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Display.gd" type="Script" id=2]
+
+[node name="HUD" type="Control"]
+anchor_left = 0.8
+anchor_top = 0.8
+anchor_right = 1.0
+anchor_bottom = 50.0
+margin_left = 20.0
+margin_top = 20.0
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -10.0
+margin_top = -14.0
+margin_right = 135.0
+margin_bottom = 66.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+columns = 2
+
+[node name="X_Position" type="Label" parent="GridContainer"]
+margin_right = 65.0
+margin_bottom = 14.0
+text = "Posição X:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="X_Position_Value" type="Label" parent="GridContainer"]
+margin_left = 69.0
+margin_right = 77.0
+margin_bottom = 14.0
+text = "0"
+
+[node name="Y_Position" type="Label" parent="GridContainer"]
+margin_top = 18.0
+margin_right = 65.0
+margin_bottom = 32.0
+text = "Posição Y:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Y_Position_Value" type="Label" parent="GridContainer"]
+margin_left = 69.0
+margin_top = 18.0
+margin_right = 77.0
+margin_bottom = 32.0
+text = "0"
+
+[node name="Z_Position" type="Label" parent="GridContainer"]
+margin_top = 36.0
+margin_right = 65.0
+margin_bottom = 50.0
+text = "Posição Z:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Z_Position_Value" type="Label" parent="GridContainer"]
+margin_left = 69.0
+margin_top = 36.0
+margin_right = 77.0
+margin_bottom = 50.0
+text = "0"

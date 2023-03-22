@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Display.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Jogador.tscn" type="PackedScene" id=2]
+
+[node name="Master" type="Node"]
+
+[node name="KinematicBody" parent="." instance=ExtResource( 2 )]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -1, -1.06582e-14, -8.74228e-08, -3.00265e-08, 0.939166, 0.343463, 8.21045e-08, 0.343463, -0.939166, 1.51901, 7.22451, -15.2841 )
+
+[node name="Display" parent="." instance=ExtResource( 1 )]
+
+[connection signal="positionjogador" from="KinematicBody" to="Display" method="_on_KinematicBody_positionjogador"]
