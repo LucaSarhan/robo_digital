@@ -22,11 +22,17 @@ def registerPosition():
 
     Z = request.form["Z"]
     
+    Rotation_X = request.form["Rotation_X"]
+
+    Rotation_Y = request.form["Rotation_Y"]
+
+    Rotation_Z = request.form["Rotation_Z"]
+    
     sq = sqlite3.connect("Coordinates.db")
 
     cursor = sq.cursor()
 
-    cursor.execute('INSERT INTO Robo (X,Y,Z) VALUES (?,?,?)', (X,Y,Z))
+    cursor.execute('INSERT INTO Robo (X,Y,Z Rotation_X,Rotation_Y,Rotation_Z) VALUES (?,?,?, ?,?,?)', (X,Y,Z, Rotation_X, Rotation_Y,Rotation_Z))
 
     sq.commit()
 
@@ -92,6 +98,12 @@ def Table69():
         coordinate['Y'] = i[1]
 
         coordinate['Z'] = i[2]
+        
+        coordinate['Rotation_X'] = i[3]
+
+        coordinate['Rotation_Y'] = i[4]
+
+        coordinate['Rotation_Z'] = i[5]
 
         positions.append(coordinate)
 
