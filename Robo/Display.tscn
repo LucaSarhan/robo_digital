@@ -12,15 +12,16 @@ margin_top = 20.0
 script = ExtResource( 2 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -10.0
-margin_top = -14.0
-margin_right = 135.0
-margin_bottom = 66.0
+margin_left = -29.2
+margin_top = -32.0
+margin_right = 114.8
+margin_bottom = 85.0
 color = Color( 0, 0, 0, 1 )
 
 [node name="GridContainer" type="GridContainer" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_top = -25.0
+margin_right = 77.0
+margin_bottom = 79.0
 columns = 2
 
 [node name="X_Position" type="Label" parent="GridContainer"]
@@ -70,31 +71,37 @@ text = "0"
 margin_top = 54.0
 margin_right = 65.0
 margin_bottom = 68.0
+text = "Angular X:"
 
 [node name="X_Rotation_Value" type="Label" parent="GridContainer"]
 margin_left = 69.0
 margin_top = 54.0
 margin_right = 77.0
 margin_bottom = 68.0
+text = "0"
 
 [node name="Y_Rotation" type="Label" parent="GridContainer"]
 margin_top = 72.0
 margin_right = 65.0
 margin_bottom = 86.0
+text = "Angular Y:"
 
 [node name="Y_Rotation_Value" type="Label" parent="GridContainer"]
 margin_left = 69.0
 margin_top = 72.0
 margin_right = 77.0
 margin_bottom = 86.0
+text = "0"
 
 [node name="Z_Rotation" type="Label" parent="GridContainer"]
 margin_top = 90.0
 margin_right = 65.0
 margin_bottom = 104.0
+text = "Angular Z:"
 
 [node name="Z_Rotation_Value" type="Label" parent="GridContainer"]
 margin_left = 69.0
 margin_top = 90.0
 margin_right = 77.0
 margin_bottom = 104.0
+text = "0"

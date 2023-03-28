@@ -28,11 +28,11 @@ def registerPosition():
 
     Rotation_Z = request.form["Rotation_Z"]
     
-    sq = sqlite3.connect("Coordinates.db")
+    sq = sqlite3.connect("Cordinates2.db")
 
     cursor = sq.cursor()
 
-    cursor.execute('INSERT INTO Robo (X,Y,Z Rotation_X,Rotation_Y,Rotation_Z) VALUES (?,?,?, ?,?,?)', (X,Y,Z, Rotation_X, Rotation_Y,Rotation_Z))
+    cursor.execute('INSERT INTO Robo (X,Y,Z, Rx,Ry,Rz) VALUES (?,?,?, ?,?,?)', (X,Y,Z, Rotation_X, Rotation_Y,Rotation_Z))
 
     sq.commit()
 
@@ -75,7 +75,7 @@ def Godot():
 
 def Table69():
 
-    sq = sqlite3.connect("Coordinates.db")
+    sq = sqlite3.connect("Cordinates2.db")
 
     cursor = sq.cursor()
 

@@ -20,7 +20,7 @@ var speed := Vector3(0,0,0)
 
 # Signal for the HUD
 
-signal positionjogador(px, py, pz)
+signal positionjogador(px, py, pz, rx, ry, rz)
 
 # Function that equalizes the positions and determines the direction of movement
 
@@ -112,10 +112,16 @@ func _on_HTTPRequest_request_completed(result, response_code, headers, body):
 
 			rotation_position.z = Position_Player(rotation_position.z, rotation_future.z, "z")
 
+			self.rotation_degrees.x = rotation_position.x
+
+			self.rotation_degrees.y = rotation_position.y
+
+			self.rotation_degrees.z = rotation_position.z
+
 			print(current_position.x, ", ", current_position.y, ", ", current_position.z, ", ",rotation_position.x, ", ", rotation_position.y, ", ", rotation_position.z) # Show current coordinates
 
 			move_and_slide(speed) # move the player
 
-			emit_signal("positionjogador", current_position.x, current_position.y, current_position.z) # Emits a signal to the HUD
+			emit_signal("positionjogador", current_position.x, current_position.y, current_position.z, rotation_position.x, rotation_position.y, rotation_position.z) # Emits a signal to the HUD
 
 			yield(get_tree().create_timer(interval), "timeout") # delay
